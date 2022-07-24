@@ -13,6 +13,9 @@
         <!-- partial -->
         @include('admin.navbar');
 
+        @include('admin.body');
+
+
         <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
