@@ -71,17 +71,16 @@
                  <span class="menu-icon">
                      <i class="mdi mdi-laptop"></i>
                  </span>
-                 <span class="menu-title">Basic UI Elements</span>
+                 <span class="menu-title">Products</span>
                  <i class="menu-arrow"></i>
              </a>
              <div class="collapse" id="ui-basic">
                  <ul class="nav flex-column sub-menu">
-                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                     <li class="nav-item"> <a class="nav-link" href="{{url('view_product')}}">Add Product</a>
                      </li>
-                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
+                     <li class="nav-item"> <a class="nav-link" href="">Show Products</a>
                      </li>
-                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                     </li>
+
                  </ul>
              </div>
          </li>
@@ -101,7 +100,8 @@
                  <span class="menu-title">Tables</span>
              </a>
          </li>
-         <li class="nav-item menu-items">
+
+         <!-- <li class="nav-item menu-items">
              <a class="nav-link" href="pages/charts/chartjs.html">
                  <span class="menu-icon">
                      <i class="mdi mdi-chart-bar"></i>
@@ -145,6 +145,6 @@
                  </span>
                  <span class="menu-title">Documentation</span>
              </a>
-         </li>
+         </li> -->
      </ul>
  </nav>
