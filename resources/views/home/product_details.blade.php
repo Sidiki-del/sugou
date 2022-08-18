@@ -3,6 +3,8 @@
 
 <head>
     <!-- Basic -->
+    <base href="/public">
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Mobile Metas -->
@@ -28,44 +30,60 @@
         <!-- header section strats -->
 
         @include('home.header');
+        <div class="col-sm-6 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:30px">
+            <div class="box">
+                <div class="option_container">
 
+                </div>
+                <div class="img-box">
+                    <img style="width: 400px; height:400px; padding: 30px" src="product/{{$product -> image}}" alt="">
+                </div>
+                <div class="detail-box">
+                    <h5>
+                        {{$product -> title}}
+                    </h5>
+                    @if($product -> discount !=null)
+
+                    <h6>
+                        Discount Price:
+                        <br>
+                        ${{$product -> discount}}
+                    </h6>
+
+                    <h6 style='text-decoration: line-through; color:red'>
+                        Price:
+                        <br>
+                        ${{$product -> price}}
+                    </h6>
+
+                    @else
+
+                    <h6>
+                        ${{$product -> price}}
+                    </h6>
+
+                    @endif
+
+
+                    <h6> Product Category: {{$product -> category }}</h6>
+                    <h6> Product Description: {{$product -> description }}</h6>
+                    <h6> Availlable Quantity: {{$product -> quantity }}</h6>
+                    <a href="" class='btn btn-primary'>ADD TO CARD</a>
+
+
+                </div>
+            </div>
+        </div>
         <!-- end header section -->
         <!-- slider section -->
 
-        @include('home.slider');
 
         <!-- end slider section -->
     </div>
     <!-- why section -->
 
-    @include('home.why');
-
-    <!-- end why section -->
-
-    <!-- arrival section -->
-
-    @include('home.arrival');
-
-    <!-- end arrival section -->
-
-    <!-- product section -->
-
-    @include('home.product');
-
-    <!-- end product section -->
-
-    @include('home.suscribe');
 
 
-    <!-- subscribe section -->
-
-    <!-- end subscribe section -->
-    <!-- client section -->
-
-    @include('home.client');
-
-    <!-- end client section -->
-    <!-- footer start -->
 
     @include('home.footer');
 
