@@ -54,6 +54,12 @@
 
         <div class="main-panel">
             <div class="content-wrapper">
+                @if(session()->has('message'))
+                <div class='alert alert-success'>
+                    <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>x</button>
+                    {{session()->get('message')}}
+                </div>
+                @endif
                 <h2 class='h2_font'>All Products</h2>
                 <table class='center'>
                     <tr class='th_class'>
@@ -64,6 +70,8 @@
                         <th class='th_des'>Price</th>
                         <th class='th_des'>Discount Price</th>
                         <th class='th_des'>Product Image</th>
+                        <th class='th_des'>Delete</th>
+                        <th class='th_des'>Edit</th>
                     </tr>
 
                     @foreach($product as $product)
@@ -75,6 +83,13 @@
                         <td>{{$product -> price}}</td>
                         <td>{{$product -> discount}}</td>
                         <td><img class='img_size' src="/product/{{$product -> image}}" alt="" srcset=""></td>
+                        <td>
+                            <a class='btn btn-danger' onclick="return confirm('Sure To Delete')"
+                                href="{{url('delete_product', $product -> id)}}">Delete</a>
+                        </td>
+                        <td>
+                            <a class='btn btn-success' href="{{url('update_product', $product -> id)}}">Edit</a>
+                        </td>
                     </tr>
 
                     @endforeach

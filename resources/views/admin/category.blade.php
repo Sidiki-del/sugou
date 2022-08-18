@@ -52,7 +52,8 @@
                     <form action="{{url('add_category')}}" method='POST'>
                         @csrf
 
-                        <input type="text" class='input_color' name='category_name' placeholder='Write Category Name'>
+                        <input type="text" class='input_color' name='category_name' placeholder='Write Category Name'
+                            required=''>
                         <input type="submit" class='btn btn-primary' name='submit' value='Add Category'>
                     </form>
                     <table class='center'>
